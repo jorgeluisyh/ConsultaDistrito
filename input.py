@@ -63,10 +63,14 @@ def busqueda():
       else:
         return "Este Ubigeo no existe"
     else:
+      # var.replace('Ñ',u'\u00d1')
       print "letra"
+      var = var.upper()
+      var.replace(u'Ñ','\u00d1')
       lista=[]
       for k,v in baseDistritos.items():
-        if df.SequenceMatcher(None,var.upper(), v[0]).ratio()>0.8:
+        name = unicode(v[0]).replace('\u00d1',u'Ñ')
+        if df.SequenceMatcher(None,var.upper(), name).ratio()>0.8:
           print var,v[0]
           lista.append([v[0],v[1],v[2],k])
       
@@ -122,8 +126,7 @@ def func(event):
     # print("You hit return.")
     print'\a'
     
-
-
+    
 master.bind('<Return>', func)
 
 tk.mainloop()
