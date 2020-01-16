@@ -5,8 +5,7 @@ block_cipher = None
 added_files = [
          ( 'peru.ico', '.' ),
          ( 'peru_fisico.png', '.' )
-         ]
-         
+         ]         
 a = Analysis(['input.py'],
              pathex=['D:\\JYUPANQUI\\Desarrollo\\tkinter_ubigeo'],
              binaries=[],
@@ -33,4 +32,4 @@ exe = EXE(pyz,
           strip=False,
           upx=True,
           runtime_tmpdir=None,
-          console=False , icon='icon.ico')
+          console=False, icon='icon.ico')

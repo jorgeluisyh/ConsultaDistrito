@@ -7,7 +7,7 @@ added_files = [
          ( 'peru_fisico.png', '.' )
          ]
 a = Analysis(['input.py'],
-             pathex=['D:\\JYUPANQUI\\Desarrollo\\tkinter_ubigeo'],
+             pathex=['D:\\JYUPANQUI\\PROYECTOS\\ConsultaDistrito'],
              binaries=[],
              datas=added_files,
              hiddenimports=[],
